@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Editor</title>
+    <link rel="stylesheet" href="editor.css">
+    <!-- Qt WebEngine automatically mounts the QWebChannel JS file at this URL -->
+    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <select onchange="formatDoc('fontSize', this.value); this.selectedIndex=0;" title="글자 크기">
+            <option value="" selected disabled>크기</option>
+            <option value="1">아주 작게 (8pt)</option>
+            <option value="2">작게 (10pt)</option>
+            <option value="3">보통 (12pt)</option>
+            <option value="4">크게 (14pt)</option>
+            <option value="5">아주 크게 (18pt)</option>
+            <option value="6">더 크게 (24pt)</option>
+            <option value="7">최대 (36pt)</option>
+        </select>
+        
+        <button onclick="formatDoc('bold')" title="굵게"><b>B</b></button>
+        <button onclick="formatDoc('italic')" title="기울임"><i>I</i></button>
+        <button onclick="formatDoc('underline')" title="밑줄"><u>U</u></button>
+        <button onclick="formatDoc('strikeThrough')" title="취소선"><s>S</s></button>
+        
+        <span class="separator"></span>
+        
+        <input type="color" onchange="formatDoc('foreColor', this.value)" title="글자 색상" id="colorPicker">
+        
+        <span class="separator"></span>
+        
+        <button onclick="formatDoc('justifyLeft')" title="왼쪽 정렬">◀</button>
+        <button onclick="formatDoc('justifyCenter')" title="가운데 정렬">▲</button>
+        <button onclick="formatDoc('justifyRight')" title="오른쪽 정렬">▶</button>
+        
+        <span class="separator"></span>
+        
+        <button onclick="formatDoc('removeFormat')" title="모든 서식 지우기">Clear</button>
+
+        <span class="separator"></span>
+        
+        <button onclick="insertTable()" title="표 삽입">표 삽입</button>
+        <button onclick="insertRow()" title="아래에 행 추가">행 +</button>
+        <button onclick="deleteRow()" title="현재 행 삭제">행 -</button>
+        <button onclick="insertColumn()" title="우측에 열 추가">열 +</button>
+        <button onclick="deleteColumn()" title="현재 열 삭제">열 -</button>
+    </div>
+    
+    <div id="editor" contenteditable="true" placeholder="여기에 이메일 본문을 작성해 주세요..."></div>
+
+    <script src="editor.js"></script>
+</body>
+</html>

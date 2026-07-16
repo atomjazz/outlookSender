@@ -1,0 +1,69 @@
+# ===== 의존성 / 패키지 =====
+node_modules/
+bower_components/
+vendor/
+.venv/
+venv/
+__pycache__/
+*.egg-info/
+
+# ===== 빌드 산출물 =====
+dist/
+build/
+out/
+.next/
+.nuxt/
+target/
+*.class
+
+# ===== 락파일 (내용 거대, 읽을 필요 없음) =====
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+poetry.lock
+Cargo.lock
+
+# ===== 로그 / 캐시 =====
+*.log
+logs/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== 미디어 / 바이너리 (텍스트 아님, 읽어도 의미 없음) =====
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.mp4
+*.mov
+*.mp3
+*.zip
+*.tar.gz
+*.pdf
+
+# ===== 환경변수 / 시크릿 (보안상 절대 인덱싱 금지) =====
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ===== 대용량 데이터 / 모델 파일 =====
+*.gguf
+*.safetensors
+*.onnx
+data/
+datasets/
+models/
+
+# 워크스페이스 파일
+email.code-workspace

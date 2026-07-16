@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.toolbar {
+    background-color: #f5f5f7;
+    border-bottom: 1px solid #e0e0e3;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.toolbar button, .toolbar select {
+    background: #ffffff;
+    border: 1px solid #d1d1d6;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 13px;
+    color: #333333;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    box-sizing: border-box;
+    transition: all 0.15s ease;
+}
+
+.toolbar button:hover, .toolbar select:hover {
+    background-color: #f0f0f2;
+    border-color: #aeaea3;
+}
+
+.toolbar button:active {
+    background-color: #e5e5ea;
+}
+
+.toolbar select {
+    padding: 0 4px;
+    min-width: 60px;
+}
+
+.toolbar input[type="color"] {
+    border: 1px solid #d1d1d6;
+    border-radius: 4px;
+    background: #ffffff;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.separator {
+    width: 1px;
+    height: 18px;
+    background-color: #d1d1d6;
+    margin: 0 4px;
+    display: inline-block;
+}
+
+#editor {
+    flex: 1;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-y: auto;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+#editor[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #8e8e93;
+    cursor: text;
+}
+
+/* Placeholder badge styling */
+.placeholder-badge {
+    background-color: rgba(0, 120, 212, 0.08);
+    border-bottom: 2px dashed #0078d4;
+    border-radius: 2px;
+    padding: 1px 4px;
+    margin: 0 2px;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    user-select: none;
+    pointer-events: none;
+    display: inline-block;
+    vertical-align: baseline;
+    -webkit-user-modify: read-only;
+}
