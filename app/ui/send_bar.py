@@ -520,6 +520,6 @@ class SendBarWidget(QWidget):
         is_visible = self.mail_group.isVisible()
         self.mail_group.setVisible(not is_visible)
         if is_visible:
-            self.toggle_btn.setText("메일 기본 정보 펴기 ▼")
+            self.toggle_btn.setText("메일 기본 정보 펴기 ▲")
         else:
-            self.toggle_btn.setText("메일 기본 정보 접기 ▲")
+            self.toggle_btn.setText("메일 기본 정보 접기 ▼")
