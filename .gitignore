@@ -62,3 +62,7 @@ Thumbs.db
 # Application local storage & templates
 app/storage/templates/*
 !app/storage/templates/.gitkeep
+
+# Antigravity Setting
+.antigravityignore
+.agents/
